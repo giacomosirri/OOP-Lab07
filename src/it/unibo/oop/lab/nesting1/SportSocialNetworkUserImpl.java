@@ -135,8 +135,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
         @Override
         public boolean equals(final Object o) {
         	return (o instanceof Sport) ? this.hashCode() == o.hashCode() : false;
-        }
-        
+        }   
     }
-    
 }

@@ -3,6 +3,9 @@
  */
 package it.unibo.oop.lab.enum1;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import it.unibo.oop.lab.socialnetwork.SocialNetworkUserImpl;
 import it.unibo.oop.lab.socialnetwork.User;
 
@@ -12,11 +15,11 @@ import it.unibo.oop.lab.socialnetwork.User;
  * to follow.
  * 
  * 1) Define the same behavior as done on the previous exercise: - you can reuse
- * the same class, but... - ..now make explicit reference to an enumeration
+ * the same class, but... now make explicit reference to an enumeration
  * Sport rather than a nested static class
  * 
  * 
- * - NOTE: now we going to define Sport as an enumeration (in its own file
+ * - NOTE: now we are going to define Sport as an enumeration (in its own file
  * Sport.java)
  * 
  * 
@@ -25,19 +28,15 @@ import it.unibo.oop.lab.socialnetwork.User;
  */
 public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUserImpl<U> {
 
-    /*
-     * TODO
-     * 
-     * add a field to keep track of the set of sports followed/done by a user
-     */
+	private final Set<Sport> sports;
 
     /**
      * Builds a new {@link SportSocialNetworkUserImpl}.
      * 
      * @param name
-     *            the user firstname
+     *            the user first name
      * @param surname
-     *            the user lastname
+     *            the user last name
      * @param user
      *            alias of the user, i.e. the way a user is identified on an
      *            application
@@ -50,9 +49,9 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * Builds a new {@link SportSocialNetworkUserImpl}.
      * 
      * @param name
-     *            the user firstname
+     *            the user first name
      * @param surname
-     *            the user lastname
+     *            the user last name
      * @param userAge
      *            user's age
      * @param user
@@ -61,14 +60,9 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     public SportSocialNetworkUserImpl(final String name, final String surname, final String user, final int userAge) {
         super(name, surname, user, userAge);
+        this.sports = new HashSet<>();
     }
-
-    /*
-     * [METHODS]
-     * 
-     * Redefine the methods below reusing the same code of previous exercise
-     */
-
+    
     /**
      * Add a new sport followed by this user: if the user already likes or does
      * the sport, nothing happens.
@@ -78,7 +72,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     // TODO
     public void addSport(final Sport sport) {
-
+    	this.sports.add(sport);
     }
 
     /**
@@ -90,6 +84,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * @return true if the user likes sport s
      */
     public boolean hasSport(final Sport s) {
-        return false;
+        return this.sports.contains(s);
     }
 }
