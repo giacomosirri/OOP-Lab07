@@ -80,13 +80,7 @@ public final class TestAnonymousComparator {
     	 */
     	Comparator<User> increasingComparator = new Comparator<User>() {
     		public int compare(final User first, final User second) {
-    			if (first.getAge() == second.getAge()) {
-    				return 0;
-    			} else if (first.getAge() < second.getAge()) {
-    				return -1;
-    			} else {
-    				return 1;
-    			}
+    			return Integer.compare(first.getAge(), second.getAge());
     		}
     	};
     	denzelUsers.sort(increasingComparator);
@@ -119,11 +113,7 @@ public final class TestAnonymousComparator {
     	 * NOTE: in order to sort a list think about a method of the utility
     	 * class Collections
     	 */
-    	Comparator<User> decreasingComparator = new Comparator<User>() {
-    		public int compare(final User first, final User second) {
-    			return increasingComparator.compare(second, first);
-    		}
-    	};
+    	Comparator<User> decreasingComparator = increasingComparator.reversed();
     	rossiUsers.sort(decreasingComparator);
     	/*
     	 * expected Result
