@@ -49,9 +49,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     public static final Sport BIKE;
 
-    /*
-     * TODO: initialize properly these sports
-     */
     static {
         SOCCER = new Sport("soccer");
         F1 = new Sport("f1");
@@ -70,9 +67,9 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * Builds a new {@link SportSocialNetworkUserImpl}.
      * 
      * @param name
-     *            the user firstname
+     *            the user first name
      * @param surname
-     *            the user lastname
+     *            the user last name
      * @param user
      *            alias of the user, i.e. the way a user is identified on an
      *            application
@@ -85,9 +82,9 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * Builds a new {@link SportSocialNetworkUserImpl}.
      * 
      * @param name
-     *            the user firstname
+     *            the user first name
      * @param surname
-     *            the user lastname
+     *            the user last name
      * @param userAge
      *            user's age
      * @param user
@@ -99,12 +96,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
         this.sports = new HashSet<>();
     }
 
-    /*
-     * [METHODS]
-     * 
-     * Implements all the methods below
-     */
-
     /**
      * Add a new sport followed by this user: if the user already likes or does
      * the sport, nothing happens.
@@ -114,7 +105,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     // TODO
     public void addSport(final Sport sport) {
-
+    	this.sports.add(sport);
     }
 
     /**
@@ -126,22 +117,10 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     // TODO
     public boolean hasSport(final Sport s) {
-        return false;
+        return this.sports.contains(s);
     }
 
-    /*
-     * TODO
-     * 
-     * Complete the definition of this static inner class defining a Sport along
-     * with its bare name.
-     */
     public static final class Sport {
-        /*
-         * TODO
-         * 
-         * Redefine equals so that two sports are equal only if they feature the
-         * very same name. Remember that you must also redefine hashCode()!
-         */
 
     	private final String name;
     	
@@ -155,7 +134,9 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
     	
         @Override
         public boolean equals(final Object o) {
-            return this.hashCode() == o.hashCode();
+        	return (o instanceof Sport) ? this.hashCode() == o.hashCode() : false;
         }
+        
     }
+    
 }
