@@ -16,7 +16,8 @@ import it.unibo.oop.lab.socialnetwork.User;
  */
 public final class TestSportByEnumeration {
 
-	private TestSportByEnumeration() { }
+	private TestSportByEnumeration() { 
+	}
 
 	/**
 	 * @param args

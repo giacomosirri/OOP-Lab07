@@ -71,11 +71,6 @@ public final class TestAnonymousComparator {
     	 * Order denzel's followed users incrementally by age:
     	 * 
     	 * - define an anonymous comparator to sort incrementally by age
-    	 * 
-    	 * NOTE: in order to sort a list think about a method of the utility
-    	 * class java.util.Collections
-    	 * 
-    	 * REFER TO LESSON 13-Advanced-Mechanisms.pdf, slide 41
     	 */
     	Comparator<User> increasingComparator = new Comparator<User>() {
     		public int compare(final User first, final User second) {
@@ -108,9 +103,6 @@ public final class TestAnonymousComparator {
     	 * Order rossi's followed users by age in decreasing order:
     	 * 
     	 * - define an anonymous comparator to sort by age decreasingly
-    	 * 
-    	 * NOTE: in order to sort a list think about a method of the utility
-    	 * class Collections
     	 */
     	Comparator<User> decreasingComparator = increasingComparator.reversed();
     	rossiUsers.sort(decreasingComparator);
