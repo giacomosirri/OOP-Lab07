@@ -18,9 +18,9 @@ package it.unibo.oop.lab.enum2;
  */
 public enum Sport {
 	
-	BASKET(5, "basket", Place.INDOOR), VOLLEY(6, "volley", Place.INDOOR), TENNIS(1, "tennis", Place.OUTDOOR),
-	BIKE(1, "cycling", Place.OUTDOOR), F1(1, "formula 1", Place.OUTDOOR), MOTOGP(1, "motogp", Place.OUTDOOR),
-	SOCCER(11, "soccer", Place.OUTDOOR);
+	BASKET(5, "Basketball", Place.INDOOR), VOLLEY(6, "Volley", Place.INDOOR), TENNIS(1, "Tennis", Place.OUTDOOR),
+	BIKE(1, "Road cycling", Place.OUTDOOR), F1(1, "Formula 1", Place.OUTDOOR), MOTOGP(1, "MotoGP", Place.OUTDOOR),
+	SOCCER(11, "Soccer", Place.OUTDOOR);
 
 	private final int members;
 	private final String sportName;

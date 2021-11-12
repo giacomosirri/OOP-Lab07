@@ -9,8 +9,8 @@ package it.unibo.oop.lab.enum1;
  */
 public enum Sport {
 	
-	BASKET("basket"), SOCCER("soccer"), TENNIS("tennis"), BIKE("bike"), F1("f1"), 
-	MOTOGP("motogp"), VOLLEY("volley");
+	BASKET("Basketball"), SOCCER("Soccer"), TENNIS("Tennis"), BIKE("Road cycling"), F1("Formula 1"), 
+	MOTOGP("MotoGP"), VOLLEY("Volleyball");
 		
 	private Sport(final String name) { 
 	}

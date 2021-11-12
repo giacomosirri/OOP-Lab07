@@ -1,6 +1,7 @@
 package it.unibo.oop.lab.nesting1;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import it.unibo.oop.lab.socialnetwork.SocialNetworkUserImpl;
@@ -47,12 +48,12 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
 	public static final Sport BIKE;
 
 	static {
-		SOCCER = new Sport("soccer");
-		F1 = new Sport("f1");
-		MOTOGP = new Sport("motogp");
-		VOLLEY = new Sport("volley");
-		BASKET = new Sport("basket");
-		BIKE = new Sport("bike");
+		SOCCER = new Sport("Soccer");
+		F1 = new Sport("Formula 1");
+		MOTOGP = new Sport("MotoGP");
+		VOLLEY = new Sport("Volleyball");
+		BASKET = new Sport("Basketball");
+		BIKE = new Sport("Road cycling");
 	}
 
 	/**
@@ -131,7 +132,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
 		 * 			the name of the sport
 		 */
 		public Sport(final String name) {
-			this.name = name;
+			this.name = Objects.requireNonNull(name);
 		}
 
 		/**
