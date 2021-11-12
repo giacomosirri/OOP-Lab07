@@ -35,9 +35,9 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
      * Builds a new {@link Sport2SocialNetworkUserImpl}.
      * 
      * @param name
-     *            the user firstname
+     *            the user first name
      * @param surname
-     *            the user lastname
+     *            the user last name
      * @param user
      *            alias of the user, i.e. the way a user is identified on an
      *            application
@@ -50,9 +50,9 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
      * Builds a new {@link Sport2SocialNetworkUserImpl}.
      * 
      * @param name
-     *            the user firstname
+     *            the user first name
      * @param surname
-     *            the user lastname
+     *            the user last name
      * @param userAge
      *            user's age
      * @param user
