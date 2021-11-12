@@ -4,6 +4,7 @@
 package it.unibo.oop.lab.enum2;
 
 /**
+ * 
  * Represents an enumeration for declaring sports.
  * 
  * 1) You must add a field keeping track of the number of members each team is
@@ -16,7 +17,7 @@ package it.unibo.oop.lab.enum2;
  * 
  */
 public enum Sport {
-
+	
 	BASKET(5, "basket", Place.INDOOR), VOLLEY(6, "volley", Place.INDOOR), TENNIS(1, "tennis", Place.OUTDOOR),
 	BIKE(1, "cycling", Place.OUTDOOR), F1(1, "formula 1", Place.OUTDOOR), MOTOGP(1, "motogp", Place.OUTDOOR),
 	SOCCER(11, "soccer", Place.OUTDOOR);
@@ -31,18 +32,36 @@ public enum Sport {
 		this.place = place;
 	}
 
+	/**
+	 * Returns whether a sport is individual or not.
+	 * 
+	 * @return true if teams are composed of one member.
+	 */
 	public boolean isIndividualSport() {
 		return this.members == 1;
 	}
 	
+	/**
+	 * Returns whether a sport is played indoor or outdoor.
+	 * 
+	 * @return true if the sport is practiced indoor.
+	 */
 	public boolean isIndoorSport() {
 		return this.place == Place.INDOOR;
 	}
 	
+	/**
+	 * Returns the place where the sport is played.
+	 * 
+	 * @return a place.
+	 */
 	public Place getPlace() {
 		return this.place;
 	}
 	
+	/**
+	 * {@inheritDoc}
+	 */
 	public String toString() {
 		return this.sportName + ": a team is composed by " + (this.isIndividualSport() ?
 				"1" : this.members) + "members and is played" + this.place.toString();

@@ -1,16 +1,21 @@
+/**
+ * 
+ */
 package it.unibo.oop.lab.enum2;
 
+/**
+ * 
+ * Represents the place in which a sport can be practiced: outdoor or indoor
+ */
 public enum Place {
 
-	INDOOR("indoor"), OUTDOOR("outdoor");
-
-	private final String place;
+	/**
+	 * Indoor
+	 */
+	INDOOR, 
 	
-	Place(final String place) {
-		this.place = place;
-	}
-	
-	public String toString() {
-		return this.place;
-	}
+	/**
+	 * Outdoor
+	 */
+	OUTDOOR;
 }

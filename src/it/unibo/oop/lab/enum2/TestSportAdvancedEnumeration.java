@@ -16,7 +16,8 @@ import it.unibo.oop.lab.socialnetwork.User;
  */
 public final class TestSportAdvancedEnumeration {
 
-    private TestSportAdvancedEnumeration() { }
+    private TestSportAdvancedEnumeration() { 
+    }
 
     /**
      * This is going to act as a test for

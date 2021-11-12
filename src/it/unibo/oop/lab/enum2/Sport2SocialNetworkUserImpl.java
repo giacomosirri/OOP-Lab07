@@ -64,7 +64,7 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
 	}
 
 	/**
-	 * Add a new sport followed by this user: if the user already likes or does
+	 * Adds a new sport followed by this user: if the user already likes or does
 	 * the sport, nothing happens.
 	 * 
 	 * @param sport
@@ -89,7 +89,7 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
 	private Set<Sport> getSports(){
 		return new HashSet<>(this.sports);
 	}
-	
+
 	/**
 	 * Returns the set of individual sports followed/practiced by this user: a
 	 * sport is individual if the number of team member is = 1.
