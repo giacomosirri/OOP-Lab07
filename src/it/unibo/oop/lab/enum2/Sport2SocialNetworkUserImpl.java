@@ -116,7 +116,7 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
 	public Set<Sport> getSportPracticedInPlace(Place p) {
 		Set<Sport> thisPlaceSports = new HashSet<>();
 		for (final Sport thisSport : this.getSports()) {
-			if (thisSport.getPlace() == p) {
+			if (thisSport.getPlace().equals(p)) {
 				thisPlaceSports.add(thisSport);
 			}
 		}

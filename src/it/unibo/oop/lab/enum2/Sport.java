@@ -47,7 +47,7 @@ public enum Sport {
 	 * @return true if the sport is practiced indoor.
 	 */
 	public boolean isIndoorSport() {
-		return this.place == Place.INDOOR;
+		return this.place.equals(Place.INDOOR);
 	}
 	
 	/**
