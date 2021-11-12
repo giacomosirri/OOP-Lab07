@@ -2,10 +2,22 @@ package it.unibo.oop.lab.nesting2;
 
 import java.util.List;
 
+/**
+ * 
+ * Represents an implementation of an {@link it.unibo.oop.lab.nesting2.Acceptor}, 
+ * which accepts elements within a {@link java.util.List}.
+ *
+ * @param <T>			
+ */
 public class OneListAcceptable<T> implements Acceptable<T> {
 	
 	private final List<T> acceptableElements;
 	
+	/**
+	 * 
+	 * @param elements
+	 * 				the elements to be added to the {@link it.unibo.oop.lab.nesting2.Acceptor} 
+	 */
 	public OneListAcceptable(List<T> elements) {
 		this.acceptableElements = elements;
 	}

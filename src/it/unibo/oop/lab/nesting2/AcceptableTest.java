@@ -33,7 +33,7 @@ public class AcceptableTest {
     }
 
     /**
-     * Test if a wrong sequence makes an exception to be raised.
+     * Tests if a wrong sequence makes an exception to be raised.
      */
     @Test
     public void test2() {
@@ -63,7 +63,7 @@ public class AcceptableTest {
     }
 
     /**
-     * Test raising
+     * Tests raising
      * {@link it.unibo.oop.lab.nesting2.Acceptor.EndNotAcceptedException}.
      */
     @Test

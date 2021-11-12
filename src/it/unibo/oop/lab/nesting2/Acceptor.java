@@ -10,7 +10,7 @@ package it.unibo.oop.lab.nesting2;
 public interface Acceptor<T> {
 
     /**
-     * Accept a new element. In case the element is not part of the set
+     * Accepts a new element. In case the element is not part of the set
      * sequence, throws a {@link Acceptor.ElementNotAcceptedException}.
      * 
      * @param newElement
@@ -58,8 +58,8 @@ public interface Acceptor<T> {
     }
 
     /**
-     * Occurring when trying to terminate accepting new elements, but still
-     * other elements have to be accepted.
+     * Occurring when trying to terminate accepting new elements, but
+     * other elements still have to be accepted.
      */
     @SuppressWarnings("serial")
     class EndNotAcceptedException extends RuntimeException {
