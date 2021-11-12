@@ -70,7 +70,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * @param sport
      *            a sport followed/done by the user
      */
-    // TODO
     public void addSport(final Sport sport) {
     	this.sports.add(sport);
     }
