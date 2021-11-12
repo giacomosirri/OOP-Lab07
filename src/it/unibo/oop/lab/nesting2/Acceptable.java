@@ -2,7 +2,7 @@ package it.unibo.oop.lab.nesting2;
 
 /**
  * 
- * Represent a class of object accepting a given sequence of elements.
+ * Represent a class of objects accepting a given sequence of elements.
  *
  * @param <T>
  */

@@ -59,7 +59,7 @@ public interface Acceptor<T> {
 
     /**
      * Occurring when trying to terminate accepting new elements, but still
-     * other elements have to accepted.
+     * other elements have to be accepted.
      */
     @SuppressWarnings("serial")
     class EndNotAcceptedException extends RuntimeException {
